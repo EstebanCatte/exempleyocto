@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: GPL-2.0
+Upstream-Status: Pending [Pending]
+diff --git a/init/main.c b/init/main.c
+index b9808ae45cc4..2f65e7418f6a 100644
+--- a/init/main.c
++++ b/init/main.c
+@@ -1020,6 +1020,7 @@ void start_kernel(void)
+ 	 * too:
+ 	 */
+ 	locking_selftest();
++	pr_notice("Hi this is my PATCH to kernel \n");
+ 
+ #ifdef CONFIG_BLK_DEV_INITRD
+ 	if (initrd_start && !initrd_below_start_ok &&
